@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/parasm/PycharmProjects/Unet_4_exps/main/no_patching_no_augmentations.py", line 110, in <module>
+    trainer.train_and_evaluate(fold, config['epochs'])
+  File "/home/parasm/PycharmProjects/Unet_4_exps/trainers/trainer.py", line 19, in train_and_evaluate
+    tab = wandb.Table(data=[["batch_size", str(config['batch_size'])],
+                                               ~~~~~~^^^^^^^^^^^^^^
+TypeError: 'int' object is not subscriptable

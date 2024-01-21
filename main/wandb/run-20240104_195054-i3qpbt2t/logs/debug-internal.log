@@ -1,0 +1,217 @@
+2024-01-04 19:50:54,624 INFO    StreamThr :53651 [internal.py:wandb_internal():86] W&B internal server running at pid: 53651, started at: 2024-01-04 19:50:54.623806
+2024-01-04 19:50:54,624 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: status
+2024-01-04 19:50:54,626 INFO    WriterThread:53651 [datastore.py:open_for_write():85] open: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/run-i3qpbt2t.wandb
+2024-01-04 19:50:54,626 DEBUG   SenderThread:53651 [sender.py:send():380] send: header
+2024-01-04 19:50:54,626 DEBUG   SenderThread:53651 [sender.py:send():380] send: run
+2024-01-04 19:50:54,940 INFO    SenderThread:53651 [dir_watcher.py:__init__():211] watching files in: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files
+2024-01-04 19:50:54,940 INFO    SenderThread:53651 [sender.py:_start_run_threads():1122] run started: i3qpbt2t with start time 1704412254.623777
+2024-01-04 19:50:54,946 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: check_version
+2024-01-04 19:50:54,947 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: check_version
+2024-01-04 19:50:55,088 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: run_start
+2024-01-04 19:50:55,101 DEBUG   HandlerThread:53651 [system_info.py:__init__():32] System info init
+2024-01-04 19:50:55,101 DEBUG   HandlerThread:53651 [system_info.py:__init__():47] System info init done
+2024-01-04 19:50:55,101 INFO    HandlerThread:53651 [system_monitor.py:start():194] Starting system monitor
+2024-01-04 19:50:55,101 INFO    SystemMonitor:53651 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-01-04 19:50:55,102 INFO    HandlerThread:53651 [system_monitor.py:probe():214] Collecting system info
+2024-01-04 19:50:55,102 INFO    SystemMonitor:53651 [interfaces.py:start():190] Started cpu monitoring
+2024-01-04 19:50:55,103 INFO    SystemMonitor:53651 [interfaces.py:start():190] Started disk monitoring
+2024-01-04 19:50:55,105 INFO    SystemMonitor:53651 [interfaces.py:start():190] Started gpu monitoring
+2024-01-04 19:50:55,106 INFO    SystemMonitor:53651 [interfaces.py:start():190] Started memory monitoring
+2024-01-04 19:50:55,107 INFO    SystemMonitor:53651 [interfaces.py:start():190] Started network monitoring
+2024-01-04 19:50:55,119 DEBUG   HandlerThread:53651 [system_info.py:probe():196] Probing system
+2024-01-04 19:50:55,120 DEBUG   HandlerThread:53651 [gitlib.py:_init_repo():53] git repository is invalid
+2024-01-04 19:50:55,120 DEBUG   HandlerThread:53651 [system_info.py:probe():244] Probing system done
+2024-01-04 19:50:55,120 DEBUG   HandlerThread:53651 [system_monitor.py:probe():223] {'os': 'Linux-6.2.0-39-generic-x86_64-with-glibc2.35', 'python': '3.11.6', 'heartbeatAt': '2024-01-04T23:50:55.119209', 'startedAt': '2024-01-04T23:50:54.621571', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/parasm/PycharmProjects/Unet_4_exps/main/no_patching_no_augmentations.py', 'codePathLocal': 'no_patching_no_augmentations.py', 'codePath': 'no_patching_no_augmentations.py', 'host': 'ironhide', 'username': 'parasm', 'executable': '/home/parasm/.pyenv/versions/default/bin/python', 'cpu_count': 24, 'cpu_count_logical': 32, 'cpu_freq': {'current': 2127.2743437500003, 'min': 800.0, 'max': 4937.5}, 'cpu_freq_per_core': [{'current': 1474.882, 'min': 800.0, 'max': 5500.0}, {'current': 1362.553, 'min': 800.0, 'max': 5500.0}, {'current': 3000.0, 'min': 800.0, 'max': 5500.0}, {'current': 1470.259, 'min': 800.0, 'max': 5500.0}, {'current': 1207.89, 'min': 800.0, 'max': 5500.0}, {'current': 1419.894, 'min': 800.0, 'max': 5500.0}, {'current': 1405.501, 'min': 800.0, 'max': 5500.0}, {'current': 1395.519, 'min': 800.0, 'max': 5500.0}, {'current': 1495.69, 'min': 800.0, 'max': 5800.0}, {'current': 1315.974, 'min': 800.0, 'max': 5800.0}, {'current': 1541.289, 'min': 800.0, 'max': 5800.0}, {'current': 1516.049, 'min': 800.0, 'max': 5800.0}, {'current': 1014.555, 'min': 800.0, 'max': 5500.0}, {'current': 1357.591, 'min': 800.0, 'max': 5500.0}, {'current': 1483.248, 'min': 800.0, 'max': 5500.0}, {'current': 1724.209, 'min': 800.0, 'max': 5500.0}, {'current': 1400.128, 'min': 800.0, 'max': 4300.0}, {'current': 1244.372, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}], 'disk': {'/': {'total': 937.3305015563965, 'used': 323.05443954467773}}, 'gpu': 'NVIDIA GeForce RTX 4090', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}], 'memory': {'total': 31.03087615966797}}
+2024-01-04 19:50:55,120 INFO    HandlerThread:53651 [system_monitor.py:probe():224] Finished collecting system info
+2024-01-04 19:50:55,120 INFO    HandlerThread:53651 [system_monitor.py:probe():227] Publishing system info
+2024-01-04 19:50:55,120 DEBUG   HandlerThread:53651 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2024-01-04 19:50:55,120 DEBUG   HandlerThread:53651 [system_info.py:_save_pip():68] Saving pip packages done
+2024-01-04 19:50:55,120 INFO    HandlerThread:53651 [system_monitor.py:probe():229] Finished publishing system info
+2024-01-04 19:50:55,122 DEBUG   SenderThread:53651 [sender.py:send():380] send: files
+2024-01-04 19:50:55,122 INFO    SenderThread:53651 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2024-01-04 19:50:55,124 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-04 19:50:55,125 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: stop_status
+2024-01-04 19:50:55,166 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-04 19:50:55,356 DEBUG   SenderThread:53651 [sender.py:send():380] send: telemetry
+2024-01-04 19:50:55,508 INFO    wandb-upload_0:53651 [upload_job.py:push():131] Uploaded file /tmp/tmprnbti7hswandb/meoyvvlm-wandb-metadata.json
+2024-01-04 19:50:55,582 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: log_artifact
+2024-01-04 19:50:55,583 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: log_artifact
+2024-01-04 19:50:55,807 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: partial_history
+2024-01-04 19:50:55,940 INFO    Thread-12 :53651 [dir_watcher.py:_on_file_created():271] file/dir created: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files/wandb-metadata.json
+2024-01-04 19:50:55,940 INFO    Thread-12 :53651 [dir_watcher.py:_on_file_created():271] file/dir created: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files/requirements.txt
+2024-01-04 19:50:55,940 INFO    Thread-12 :53651 [dir_watcher.py:_on_file_created():271] file/dir created: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files/media/table/Configs_0_98fad4e0332b61b11158.table.json
+2024-01-04 19:50:55,941 INFO    Thread-12 :53651 [dir_watcher.py:_on_file_created():271] file/dir created: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files/media/table
+2024-01-04 19:50:55,941 INFO    Thread-12 :53651 [dir_watcher.py:_on_file_created():271] file/dir created: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files/media
+2024-01-04 19:50:56,161 INFO    wandb-upload_0:53651 [upload_job.py:push():131] Uploaded file /tmp/tmprnbti7hswandb/4krytrfs-media/table/Configs_0_98fad4e0332b61b11158.table.json
+2024-01-04 19:50:56,435 INFO    wandb-upload_1:53651 [upload_job.py:push():89] Uploaded file /home/parasm/.local/share/wandb/artifacts/staging/tmpxz9_2myb
+2024-01-04 19:50:56,927 INFO    SenderThread:53651 [sender.py:send_request_log_artifact():1444] logged artifact run-i3qpbt2t-Configs - {'id': 'QXJ0aWZhY3Q6NjgyMDI3MjYx', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjEyNzU0NDM3OQ==', 'latestArtifact': None}}
+2024-01-04 19:50:56,927 DEBUG   SenderThread:53651 [sender.py:send():380] send: files
+2024-01-04 19:50:56,927 INFO    SenderThread:53651 [sender.py:_save_file():1378] saving file media/table/Configs_0_98fad4e0332b61b11158.table.json with policy now
+2024-01-04 19:50:56,928 DEBUG   SenderThread:53651 [sender.py:send():380] send: history
+2024-01-04 19:50:56,928 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: summary_record
+2024-01-04 19:50:56,929 INFO    SenderThread:53651 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-01-04 19:50:56,940 INFO    Thread-12 :53651 [dir_watcher.py:_on_file_created():271] file/dir created: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files/wandb-summary.json
+2024-01-04 19:50:57,251 INFO    wandb-upload_0:53651 [upload_job.py:push():131] Uploaded file /tmp/tmprnbti7hswandb/puyy8hpq-media/table/Configs_0_98fad4e0332b61b11158.table.json
+2024-01-04 19:50:59,930 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 19:51:04,931 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 19:51:09,932 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 19:51:10,125 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-04 19:51:10,125 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: stop_status
+2024-01-04 19:51:10,125 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-04 19:51:15,260 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 19:51:20,261 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 19:51:25,125 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-04 19:51:25,125 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: stop_status
+2024-01-04 19:51:25,166 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-04 19:51:26,252 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 19:51:26,948 INFO    Thread-12 :53651 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files/config.yaml
+2024-01-04 19:51:31,354 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 19:51:36,355 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 19:51:40,125 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-04 19:51:40,126 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: stop_status
+2024-01-04 19:51:40,166 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-04 19:51:42,237 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 19:51:47,238 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 19:51:52,238 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 19:51:53,421 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: partial_history
+2024-01-04 19:51:53,422 DEBUG   SenderThread:53651 [sender.py:send():380] send: history
+2024-01-04 19:51:53,422 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: summary_record
+2024-01-04 19:51:53,423 INFO    SenderThread:53651 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-01-04 19:51:53,512 DEBUG   SenderThread:53651 [sender.py:send():380] send: telemetry
+2024-01-04 19:51:53,512 DEBUG   SenderThread:53651 [sender.py:send():380] send: exit
+2024-01-04 19:51:53,512 INFO    SenderThread:53651 [sender.py:send_exit():585] handling exit code: 0
+2024-01-04 19:51:53,512 INFO    SenderThread:53651 [sender.py:send_exit():587] handling runtime: 58
+2024-01-04 19:51:53,512 INFO    SenderThread:53651 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-01-04 19:51:53,512 INFO    SenderThread:53651 [sender.py:send_exit():593] send defer
+2024-01-04 19:51:53,513 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: defer
+2024-01-04 19:51:53,513 INFO    HandlerThread:53651 [handler.py:handle_request_defer():172] handle defer: 0
+2024-01-04 19:51:53,513 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: defer
+2024-01-04 19:51:53,513 INFO    SenderThread:53651 [sender.py:send_request_defer():609] handle sender defer: 0
+2024-01-04 19:51:53,513 INFO    SenderThread:53651 [sender.py:transition_state():613] send defer: 1
+2024-01-04 19:51:53,513 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: defer
+2024-01-04 19:51:53,513 INFO    HandlerThread:53651 [handler.py:handle_request_defer():172] handle defer: 1
+2024-01-04 19:51:53,513 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: defer
+2024-01-04 19:51:53,513 INFO    SenderThread:53651 [sender.py:send_request_defer():609] handle sender defer: 1
+2024-01-04 19:51:53,513 INFO    SenderThread:53651 [sender.py:transition_state():613] send defer: 2
+2024-01-04 19:51:53,513 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: defer
+2024-01-04 19:51:53,513 INFO    HandlerThread:53651 [handler.py:handle_request_defer():172] handle defer: 2
+2024-01-04 19:51:53,513 INFO    HandlerThread:53651 [system_monitor.py:finish():203] Stopping system monitor
+2024-01-04 19:51:53,513 DEBUG   SystemMonitor:53651 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-01-04 19:51:53,514 DEBUG   SystemMonitor:53651 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-01-04 19:51:53,514 DEBUG   SystemMonitor:53651 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-01-04 19:51:53,515 INFO    HandlerThread:53651 [interfaces.py:finish():202] Joined cpu monitor
+2024-01-04 19:51:53,515 INFO    HandlerThread:53651 [interfaces.py:finish():202] Joined disk monitor
+2024-01-04 19:51:53,560 INFO    HandlerThread:53651 [interfaces.py:finish():202] Joined gpu monitor
+2024-01-04 19:51:53,560 INFO    HandlerThread:53651 [interfaces.py:finish():202] Joined memory monitor
+2024-01-04 19:51:53,560 INFO    HandlerThread:53651 [interfaces.py:finish():202] Joined network monitor
+2024-01-04 19:51:53,560 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: defer
+2024-01-04 19:51:53,560 INFO    SenderThread:53651 [sender.py:send_request_defer():609] handle sender defer: 2
+2024-01-04 19:51:53,560 INFO    SenderThread:53651 [sender.py:transition_state():613] send defer: 3
+2024-01-04 19:51:53,560 DEBUG   SenderThread:53651 [sender.py:send():380] send: stats
+2024-01-04 19:51:53,561 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: defer
+2024-01-04 19:51:53,561 INFO    HandlerThread:53651 [handler.py:handle_request_defer():172] handle defer: 3
+2024-01-04 19:51:53,561 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: defer
+2024-01-04 19:51:53,561 INFO    SenderThread:53651 [sender.py:send_request_defer():609] handle sender defer: 3
+2024-01-04 19:51:53,561 INFO    SenderThread:53651 [sender.py:transition_state():613] send defer: 4
+2024-01-04 19:51:53,561 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: defer
+2024-01-04 19:51:53,561 INFO    HandlerThread:53651 [handler.py:handle_request_defer():172] handle defer: 4
+2024-01-04 19:51:53,561 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: defer
+2024-01-04 19:51:53,561 INFO    SenderThread:53651 [sender.py:send_request_defer():609] handle sender defer: 4
+2024-01-04 19:51:53,561 INFO    SenderThread:53651 [sender.py:transition_state():613] send defer: 5
+2024-01-04 19:51:53,561 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: defer
+2024-01-04 19:51:53,561 INFO    HandlerThread:53651 [handler.py:handle_request_defer():172] handle defer: 5
+2024-01-04 19:51:53,561 DEBUG   SenderThread:53651 [sender.py:send():380] send: summary
+2024-01-04 19:51:53,562 INFO    SenderThread:53651 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-01-04 19:51:53,562 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: defer
+2024-01-04 19:51:53,562 INFO    SenderThread:53651 [sender.py:send_request_defer():609] handle sender defer: 5
+2024-01-04 19:51:53,562 INFO    SenderThread:53651 [sender.py:transition_state():613] send defer: 6
+2024-01-04 19:51:53,562 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: defer
+2024-01-04 19:51:53,562 INFO    HandlerThread:53651 [handler.py:handle_request_defer():172] handle defer: 6
+2024-01-04 19:51:53,562 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: defer
+2024-01-04 19:51:53,562 INFO    SenderThread:53651 [sender.py:send_request_defer():609] handle sender defer: 6
+2024-01-04 19:51:53,564 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 19:51:53,665 INFO    SenderThread:53651 [sender.py:transition_state():613] send defer: 7
+2024-01-04 19:51:53,665 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: defer
+2024-01-04 19:51:53,666 INFO    HandlerThread:53651 [handler.py:handle_request_defer():172] handle defer: 7
+2024-01-04 19:51:53,666 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: defer
+2024-01-04 19:51:53,666 INFO    SenderThread:53651 [sender.py:send_request_defer():609] handle sender defer: 7
+2024-01-04 19:51:53,958 INFO    Thread-12 :53651 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files/config.yaml
+2024-01-04 19:51:53,958 INFO    Thread-12 :53651 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files/wandb-summary.json
+2024-01-04 19:51:53,959 INFO    Thread-12 :53651 [dir_watcher.py:_on_file_created():271] file/dir created: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files/output.log
+2024-01-04 19:51:54,513 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: poll_exit
+2024-01-04 19:51:55,465 INFO    SenderThread:53651 [sender.py:transition_state():613] send defer: 8
+2024-01-04 19:51:55,465 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: poll_exit
+2024-01-04 19:51:55,466 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: defer
+2024-01-04 19:51:55,466 INFO    HandlerThread:53651 [handler.py:handle_request_defer():172] handle defer: 8
+2024-01-04 19:51:55,467 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: defer
+2024-01-04 19:51:55,467 INFO    SenderThread:53651 [sender.py:send_request_defer():609] handle sender defer: 8
+2024-01-04 19:51:55,467 INFO    SenderThread:53651 [job_builder.py:build():281] Attempting to build job artifact
+2024-01-04 19:51:55,468 INFO    SenderThread:53651 [job_builder.py:_get_source_type():404] no source found
+2024-01-04 19:51:55,468 INFO    SenderThread:53651 [sender.py:transition_state():613] send defer: 9
+2024-01-04 19:51:55,468 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: defer
+2024-01-04 19:51:55,468 INFO    HandlerThread:53651 [handler.py:handle_request_defer():172] handle defer: 9
+2024-01-04 19:51:55,469 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: defer
+2024-01-04 19:51:55,469 INFO    SenderThread:53651 [sender.py:send_request_defer():609] handle sender defer: 9
+2024-01-04 19:51:55,469 INFO    SenderThread:53651 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-01-04 19:51:55,513 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: poll_exit
+2024-01-04 19:51:55,959 INFO    Thread-12 :53651 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files/output.log
+2024-01-04 19:51:55,960 INFO    SenderThread:53651 [dir_watcher.py:finish():388] scan: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files
+2024-01-04 19:51:55,961 INFO    SenderThread:53651 [dir_watcher.py:finish():402] scan save: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files/wandb-metadata.json wandb-metadata.json
+2024-01-04 19:51:55,961 INFO    SenderThread:53651 [dir_watcher.py:finish():402] scan save: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files/output.log output.log
+2024-01-04 19:51:55,961 INFO    SenderThread:53651 [dir_watcher.py:finish():402] scan save: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files/wandb-summary.json wandb-summary.json
+2024-01-04 19:51:55,966 INFO    SenderThread:53651 [dir_watcher.py:finish():402] scan save: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files/config.yaml config.yaml
+2024-01-04 19:51:55,970 INFO    SenderThread:53651 [dir_watcher.py:finish():402] scan save: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files/requirements.txt requirements.txt
+2024-01-04 19:51:55,976 INFO    SenderThread:53651 [dir_watcher.py:finish():402] scan save: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files/media/table/Configs_0_98fad4e0332b61b11158.table.json media/table/Configs_0_98fad4e0332b61b11158.table.json
+2024-01-04 19:51:55,976 INFO    SenderThread:53651 [sender.py:transition_state():613] send defer: 10
+2024-01-04 19:51:55,976 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: poll_exit
+2024-01-04 19:51:55,977 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: defer
+2024-01-04 19:51:55,977 INFO    HandlerThread:53651 [handler.py:handle_request_defer():172] handle defer: 10
+2024-01-04 19:51:55,977 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: defer
+2024-01-04 19:51:55,978 INFO    SenderThread:53651 [sender.py:send_request_defer():609] handle sender defer: 10
+2024-01-04 19:51:55,978 INFO    SenderThread:53651 [file_pusher.py:finish():175] shutting down file pusher
+2024-01-04 19:51:56,186 INFO    wandb-upload_0:53651 [upload_job.py:push():131] Uploaded file /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files/wandb-summary.json
+2024-01-04 19:51:56,364 INFO    wandb-upload_1:53651 [upload_job.py:push():131] Uploaded file /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files/output.log
+2024-01-04 19:51:56,400 INFO    wandb-upload_2:53651 [upload_job.py:push():131] Uploaded file /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files/config.yaml
+2024-01-04 19:51:56,509 INFO    wandb-upload_3:53651 [upload_job.py:push():131] Uploaded file /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/files/requirements.txt
+2024-01-04 19:51:56,514 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: poll_exit
+2024-01-04 19:51:56,515 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: poll_exit
+2024-01-04 19:51:56,710 INFO    Thread-11 (_thread_body):53651 [sender.py:transition_state():613] send defer: 11
+2024-01-04 19:51:56,710 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: defer
+2024-01-04 19:51:56,710 INFO    HandlerThread:53651 [handler.py:handle_request_defer():172] handle defer: 11
+2024-01-04 19:51:56,711 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: defer
+2024-01-04 19:51:56,711 INFO    SenderThread:53651 [sender.py:send_request_defer():609] handle sender defer: 11
+2024-01-04 19:51:56,712 INFO    SenderThread:53651 [file_pusher.py:join():181] waiting for file pusher
+2024-01-04 19:51:56,712 INFO    SenderThread:53651 [sender.py:transition_state():613] send defer: 12
+2024-01-04 19:51:56,712 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: defer
+2024-01-04 19:51:56,712 INFO    HandlerThread:53651 [handler.py:handle_request_defer():172] handle defer: 12
+2024-01-04 19:51:56,712 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: defer
+2024-01-04 19:51:56,712 INFO    SenderThread:53651 [sender.py:send_request_defer():609] handle sender defer: 12
+2024-01-04 19:51:56,713 INFO    SenderThread:53651 [file_stream.py:finish():595] file stream finish called
+2024-01-04 19:51:56,986 INFO    SenderThread:53651 [file_stream.py:finish():599] file stream finish is done
+2024-01-04 19:51:56,986 INFO    SenderThread:53651 [sender.py:transition_state():613] send defer: 13
+2024-01-04 19:51:56,987 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: defer
+2024-01-04 19:51:56,987 INFO    HandlerThread:53651 [handler.py:handle_request_defer():172] handle defer: 13
+2024-01-04 19:51:56,987 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: defer
+2024-01-04 19:51:56,987 INFO    SenderThread:53651 [sender.py:send_request_defer():609] handle sender defer: 13
+2024-01-04 19:51:56,988 INFO    SenderThread:53651 [sender.py:transition_state():613] send defer: 14
+2024-01-04 19:51:56,988 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: defer
+2024-01-04 19:51:56,988 INFO    HandlerThread:53651 [handler.py:handle_request_defer():172] handle defer: 14
+2024-01-04 19:51:56,989 DEBUG   SenderThread:53651 [sender.py:send():380] send: final
+2024-01-04 19:51:56,989 DEBUG   SenderThread:53651 [sender.py:send():380] send: footer
+2024-01-04 19:51:56,989 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: defer
+2024-01-04 19:51:56,989 INFO    SenderThread:53651 [sender.py:send_request_defer():609] handle sender defer: 14
+2024-01-04 19:51:56,990 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-04 19:51:56,991 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: poll_exit
+2024-01-04 19:51:56,992 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: poll_exit
+2024-01-04 19:51:56,993 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: server_info
+2024-01-04 19:51:56,993 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: get_summary
+2024-01-04 19:51:56,993 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: sampled_history
+2024-01-04 19:51:56,994 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: job_info
+2024-01-04 19:51:56,994 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: server_info
+2024-01-04 19:51:57,058 DEBUG   SenderThread:53651 [sender.py:send_request():407] send_request: job_info
+2024-01-04 19:51:57,059 DEBUG   HandlerThread:53651 [handler.py:handle_request():146] handle_request: shutdown
+2024-01-04 19:51:57,059 INFO    HandlerThread:53651 [handler.py:finish():866] shutting down handler
+2024-01-04 19:51:57,995 INFO    WriterThread:53651 [datastore.py:close():294] close: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_195054-i3qpbt2t/run-i3qpbt2t.wandb
+2024-01-04 19:51:58,058 INFO    SenderThread:53651 [sender.py:finish():1534] shutting down sender
+2024-01-04 19:51:58,058 INFO    SenderThread:53651 [file_pusher.py:finish():175] shutting down file pusher
+2024-01-04 19:51:58,058 INFO    SenderThread:53651 [file_pusher.py:join():181] waiting for file pusher

@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/home/parasm/PycharmProjects/Unet_4_exps/main/no_patching_no_augmentations.py", line 110, in <module>
+    trainer.train_and_evaluate(fold, config)
+  File "/home/parasm/PycharmProjects/Unet_4_exps/trainers/trainer.py", line 19, in train_and_evaluate
+    tab = wandb.Table(data=[["batch_size", str(config['batch_size'])],
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/parasm/.pyenv/versions/default/lib/python3.11/site-packages/wandb/data_types.py", line 290, in __init__
+    self._init_from_list(data, columns, optional, dtype)
+  File "/home/parasm/.pyenv/versions/default/lib/python3.11/site-packages/wandb/data_types.py", line 315, in _init_from_list
+    self.add_data(*row)
+  File "/home/parasm/.pyenv/versions/default/lib/python3.11/site-packages/wandb/data_types.py", line 483, in add_data
+    result_type = self._get_updated_result_type(data)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/parasm/.pyenv/versions/default/lib/python3.11/site-packages/wandb/data_types.py", line 507, in _get_updated_result_type
+    raise TypeError(
+TypeError: Data row contained incompatible types:
+{'Parameter': 'num_folds', 'Value': 10} of type {'Parameter': String, 'Value': Number} is not assignable to {'Parameter': None or String, 'Value': None or String}
+Key 'Value':
+	Number not assignable to None or String
+		Number not assignable to None
+	and
+		Number not assignable to String

@@ -1,0 +1,1 @@
+{"columns": ["Parameter", "Value"], "data": [["batch_size", "2"], ["learning_rate", "0.0003"], ["num_epochs", "100"], ["scheduler", "None"], ["model_params", "Do not freeze any layers"], ["optimizer", "SGD"], ["loss_function", "BCEWithLogitsLoss"], ["seed", "10"], ["num_folds", "10"], ["model", "Unet"], ["comment", "10-fold cross validation"]]}

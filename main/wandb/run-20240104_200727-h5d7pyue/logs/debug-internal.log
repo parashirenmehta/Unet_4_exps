@@ -1,0 +1,127 @@
+2024-01-04 20:07:27,017 INFO    StreamThr :54441 [internal.py:wandb_internal():86] W&B internal server running at pid: 54441, started at: 2024-01-04 20:07:27.016642
+2024-01-04 20:07:27,018 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status
+2024-01-04 20:07:27,019 INFO    WriterThread:54441 [datastore.py:open_for_write():85] open: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_200727-h5d7pyue/run-h5d7pyue.wandb
+2024-01-04 20:07:27,019 DEBUG   SenderThread:54441 [sender.py:send():380] send: header
+2024-01-04 20:07:27,020 DEBUG   SenderThread:54441 [sender.py:send():380] send: run
+2024-01-04 20:07:27,357 INFO    SenderThread:54441 [dir_watcher.py:__init__():211] watching files in: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_200727-h5d7pyue/files
+2024-01-04 20:07:27,357 INFO    SenderThread:54441 [sender.py:_start_run_threads():1122] run started: h5d7pyue with start time 1704413247.016511
+2024-01-04 20:07:27,363 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: check_version
+2024-01-04 20:07:27,363 DEBUG   SenderThread:54441 [sender.py:send_request():407] send_request: check_version
+2024-01-04 20:07:27,503 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: run_start
+2024-01-04 20:07:27,515 DEBUG   HandlerThread:54441 [system_info.py:__init__():32] System info init
+2024-01-04 20:07:27,516 DEBUG   HandlerThread:54441 [system_info.py:__init__():47] System info init done
+2024-01-04 20:07:27,516 INFO    HandlerThread:54441 [system_monitor.py:start():194] Starting system monitor
+2024-01-04 20:07:27,516 INFO    SystemMonitor:54441 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-01-04 20:07:27,516 INFO    HandlerThread:54441 [system_monitor.py:probe():214] Collecting system info
+2024-01-04 20:07:27,516 INFO    SystemMonitor:54441 [interfaces.py:start():190] Started cpu monitoring
+2024-01-04 20:07:27,517 INFO    SystemMonitor:54441 [interfaces.py:start():190] Started disk monitoring
+2024-01-04 20:07:27,517 INFO    SystemMonitor:54441 [interfaces.py:start():190] Started gpu monitoring
+2024-01-04 20:07:27,518 INFO    SystemMonitor:54441 [interfaces.py:start():190] Started memory monitoring
+2024-01-04 20:07:27,518 INFO    SystemMonitor:54441 [interfaces.py:start():190] Started network monitoring
+2024-01-04 20:07:27,524 DEBUG   HandlerThread:54441 [system_info.py:probe():196] Probing system
+2024-01-04 20:07:27,525 DEBUG   HandlerThread:54441 [gitlib.py:_init_repo():53] git repository is invalid
+2024-01-04 20:07:27,525 DEBUG   HandlerThread:54441 [system_info.py:probe():244] Probing system done
+2024-01-04 20:07:27,525 DEBUG   HandlerThread:54441 [system_monitor.py:probe():223] {'os': 'Linux-6.2.0-39-generic-x86_64-with-glibc2.35', 'python': '3.11.6', 'heartbeatAt': '2024-01-05T00:07:27.524552', 'startedAt': '2024-01-05T00:07:27.013961', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/parasm/PycharmProjects/Unet_4_exps/main/no_patching_no_augmentations.py', 'codePathLocal': 'no_patching_no_augmentations.py', 'codePath': 'no_patching_no_augmentations.py', 'host': 'ironhide', 'username': 'parasm', 'executable': '/home/parasm/.pyenv/versions/default/bin/python', 'cpu_count': 24, 'cpu_count_logical': 32, 'cpu_freq': {'current': 2599.3330000000005, 'min': 800.0, 'max': 4937.5}, 'cpu_freq_per_core': [{'current': 3761.228, 'min': 800.0, 'max': 5500.0}, {'current': 3000.0, 'min': 800.0, 'max': 5500.0}, {'current': 3701.282, 'min': 800.0, 'max': 5500.0}, {'current': 3577.546, 'min': 800.0, 'max': 5500.0}, {'current': 3800.0, 'min': 800.0, 'max': 5500.0}, {'current': 1450.689, 'min': 800.0, 'max': 5500.0}, {'current': 994.864, 'min': 800.0, 'max': 5500.0}, {'current': 1119.459, 'min': 800.0, 'max': 5500.0}, {'current': 3900.0, 'min': 800.0, 'max': 5800.0}, {'current': 3900.0, 'min': 800.0, 'max': 5800.0}, {'current': 3665.236, 'min': 800.0, 'max': 5800.0}, {'current': 2132.382, 'min': 800.0, 'max': 5800.0}, {'current': 1871.742, 'min': 800.0, 'max': 5500.0}, {'current': 3000.0, 'min': 800.0, 'max': 5500.0}, {'current': 3693.284, 'min': 800.0, 'max': 5500.0}, {'current': 3699.987, 'min': 800.0, 'max': 5500.0}, {'current': 3389.115, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 1321.832, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3451.349, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}, {'current': 3000.0, 'min': 800.0, 'max': 4300.0}], 'disk': {'/': {'total': 937.3305015563965, 'used': 323.2856750488281}}, 'gpu': 'NVIDIA GeForce RTX 4090', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}], 'memory': {'total': 31.03087615966797}}
+2024-01-04 20:07:27,525 INFO    HandlerThread:54441 [system_monitor.py:probe():224] Finished collecting system info
+2024-01-04 20:07:27,525 INFO    HandlerThread:54441 [system_monitor.py:probe():227] Publishing system info
+2024-01-04 20:07:27,525 DEBUG   HandlerThread:54441 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2024-01-04 20:07:27,526 DEBUG   HandlerThread:54441 [system_info.py:_save_pip():68] Saving pip packages done
+2024-01-04 20:07:27,526 INFO    HandlerThread:54441 [system_monitor.py:probe():229] Finished publishing system info
+2024-01-04 20:07:27,528 DEBUG   SenderThread:54441 [sender.py:send():380] send: files
+2024-01-04 20:07:27,528 INFO    SenderThread:54441 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2024-01-04 20:07:27,532 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-04 20:07:27,532 DEBUG   SenderThread:54441 [sender.py:send_request():407] send_request: stop_status
+2024-01-04 20:07:27,578 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-04 20:07:27,752 DEBUG   SenderThread:54441 [sender.py:send():380] send: telemetry
+2024-01-04 20:07:27,938 INFO    wandb-upload_0:54441 [upload_job.py:push():131] Uploaded file /tmp/tmpl_fd1n1swandb/1vg4ngjx-wandb-metadata.json
+2024-01-04 20:07:28,007 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: log_artifact
+2024-01-04 20:07:28,008 DEBUG   SenderThread:54441 [sender.py:send_request():407] send_request: log_artifact
+2024-01-04 20:07:28,243 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: partial_history
+2024-01-04 20:07:28,358 INFO    Thread-12 :54441 [dir_watcher.py:_on_file_created():271] file/dir created: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_200727-h5d7pyue/files/wandb-metadata.json
+2024-01-04 20:07:28,358 INFO    Thread-12 :54441 [dir_watcher.py:_on_file_created():271] file/dir created: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_200727-h5d7pyue/files/media/table/Configs_0_fede35f29a23b7e4ad4f.table.json
+2024-01-04 20:07:28,358 INFO    Thread-12 :54441 [dir_watcher.py:_on_file_created():271] file/dir created: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_200727-h5d7pyue/files/requirements.txt
+2024-01-04 20:07:28,358 INFO    Thread-12 :54441 [dir_watcher.py:_on_file_created():271] file/dir created: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_200727-h5d7pyue/files/media
+2024-01-04 20:07:28,358 INFO    Thread-12 :54441 [dir_watcher.py:_on_file_created():271] file/dir created: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_200727-h5d7pyue/files/media/table
+2024-01-04 20:07:28,573 INFO    wandb-upload_0:54441 [upload_job.py:push():131] Uploaded file /tmp/tmpl_fd1n1swandb/7lbk3s97-media/table/Configs_0_fede35f29a23b7e4ad4f.table.json
+2024-01-04 20:07:28,771 INFO    wandb-upload_1:54441 [upload_job.py:push():89] Uploaded file /home/parasm/.local/share/wandb/artifacts/staging/tmpp8gnx40g
+2024-01-04 20:07:29,248 INFO    SenderThread:54441 [sender.py:send_request_log_artifact():1444] logged artifact run-h5d7pyue-Configs - {'id': 'QXJ0aWZhY3Q6NjgyMDM1Mjc1', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjEyNzU0NjgyOA==', 'latestArtifact': None}}
+2024-01-04 20:07:29,248 DEBUG   SenderThread:54441 [sender.py:send():380] send: files
+2024-01-04 20:07:29,248 INFO    SenderThread:54441 [sender.py:_save_file():1378] saving file media/table/Configs_0_fede35f29a23b7e4ad4f.table.json with policy now
+2024-01-04 20:07:29,249 DEBUG   SenderThread:54441 [sender.py:send():380] send: history
+2024-01-04 20:07:29,249 DEBUG   SenderThread:54441 [sender.py:send_request():407] send_request: summary_record
+2024-01-04 20:07:29,249 INFO    SenderThread:54441 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-01-04 20:07:29,357 INFO    Thread-12 :54441 [dir_watcher.py:_on_file_created():271] file/dir created: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_200727-h5d7pyue/files/wandb-summary.json
+2024-01-04 20:07:29,545 INFO    wandb-upload_0:54441 [upload_job.py:push():131] Uploaded file /tmp/tmpl_fd1n1swandb/rut5tshc-media/table/Configs_0_fede35f29a23b7e4ad4f.table.json
+2024-01-04 20:07:32,250 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:07:37,250 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:07:42,251 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:07:42,532 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-04 20:07:42,532 DEBUG   SenderThread:54441 [sender.py:send_request():407] send_request: stop_status
+2024-01-04 20:07:42,533 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-04 20:07:47,653 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:07:52,654 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:07:57,532 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-04 20:07:57,532 DEBUG   SenderThread:54441 [sender.py:send_request():407] send_request: stop_status
+2024-01-04 20:07:57,574 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-04 20:07:57,695 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:07:58,365 INFO    Thread-12 :54441 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_200727-h5d7pyue/files/config.yaml
+2024-01-04 20:08:02,797 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:08:07,798 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:08:12,532 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-04 20:08:12,532 DEBUG   SenderThread:54441 [sender.py:send_request():407] send_request: stop_status
+2024-01-04 20:08:12,578 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-04 20:08:13,670 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:08:18,671 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:08:23,672 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:08:27,518 DEBUG   SystemMonitor:54441 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-01-04 20:08:27,520 DEBUG   SenderThread:54441 [sender.py:send():380] send: stats
+2024-01-04 20:08:27,532 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-04 20:08:27,532 DEBUG   SenderThread:54441 [sender.py:send_request():407] send_request: stop_status
+2024-01-04 20:08:27,578 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-04 20:08:29,594 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:08:34,594 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:08:39,595 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:08:42,532 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-04 20:08:42,532 DEBUG   SenderThread:54441 [sender.py:send_request():407] send_request: stop_status
+2024-01-04 20:08:42,578 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-04 20:08:44,634 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:08:49,635 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:08:54,636 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:08:57,521 DEBUG   SenderThread:54441 [sender.py:send():380] send: stats
+2024-01-04 20:08:57,532 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-04 20:08:57,532 DEBUG   SenderThread:54441 [sender.py:send_request():407] send_request: stop_status
+2024-01-04 20:08:57,578 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-04 20:08:58,590 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: partial_history
+2024-01-04 20:08:58,591 DEBUG   SenderThread:54441 [sender.py:send():380] send: history
+2024-01-04 20:08:58,591 DEBUG   SenderThread:54441 [sender.py:send_request():407] send_request: summary_record
+2024-01-04 20:08:58,599 INFO    SenderThread:54441 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-01-04 20:08:59,382 INFO    Thread-12 :54441 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_200727-h5d7pyue/files/wandb-summary.json
+2024-01-04 20:08:59,383 INFO    Thread-12 :54441 [dir_watcher.py:_on_file_created():271] file/dir created: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_200727-h5d7pyue/files/output.log
+2024-01-04 20:08:59,636 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:09:01,383 INFO    Thread-12 :54441 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/parasm/PycharmProjects/Unet_4_exps/main/wandb/run-20240104_200727-h5d7pyue/files/output.log
+2024-01-04 20:09:04,637 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:09:09,639 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:09:12,532 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-04 20:09:12,533 DEBUG   SenderThread:54441 [sender.py:send_request():407] send_request: stop_status
+2024-01-04 20:09:12,535 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-04 20:09:14,647 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:09:19,648 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:09:24,649 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:09:27,522 DEBUG   SenderThread:54441 [sender.py:send():380] send: stats
+2024-01-04 20:09:27,533 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-04 20:09:27,533 DEBUG   SenderThread:54441 [sender.py:send_request():407] send_request: stop_status
+2024-01-04 20:09:27,578 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-04 20:09:30,635 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:09:35,635 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:09:40,636 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:09:42,533 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-04 20:09:42,533 DEBUG   SenderThread:54441 [sender.py:send_request():407] send_request: stop_status
+2024-01-04 20:09:42,574 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-04 20:09:45,673 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:09:50,674 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:09:55,675 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report
+2024-01-04 20:09:57,522 DEBUG   SenderThread:54441 [sender.py:send():380] send: stats
+2024-01-04 20:09:57,533 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-04 20:09:57,533 DEBUG   SenderThread:54441 [sender.py:send_request():407] send_request: stop_status
+2024-01-04 20:09:57,574 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-04 20:10:01,633 DEBUG   HandlerThread:54441 [handler.py:handle_request():146] handle_request: status_report

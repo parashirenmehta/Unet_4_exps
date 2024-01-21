@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="ironhide.research.cs.dal.ca" id="b40dceaa-2350-4c52-87df-eab8af00210c" port="22" nameFormat="DESCRIPTIVE" username="parasm" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>
