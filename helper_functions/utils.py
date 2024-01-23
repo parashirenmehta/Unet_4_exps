@@ -6,6 +6,10 @@ from torch.utils.data import DataLoader
 from torch import nn
 import os
 from models.unet import UNet
+import cv2
+import pandas as pd
+import numpy as np
+
 
 def create_masks(fold, config, threshold=-1):
     sigmoid = nn.Sigmoid()
@@ -69,3 +73,33 @@ def create_masks(fold, config, threshold=-1):
             if not os.path.exists(save_path):
                 os.makedirs(save_path)
             img.save(save_path + filenames[j])
+
+
+def cover_from_mask(fold, config):
+    df = pd.DataFrame(columns=['Filename', 'Cover'])
+    for filename in os.listdir(config['predicted_masks_dir'] + config['project'] + '_masks/Fold' + str(fold) + '/Without_Threshold/'):
+        # Load your probability map as a grayscale image
+        probability_map = cv2.imread(config['predicted_masks_dir'] + config['project'] + '_masks/Fold' + str(fold) + '/Without_Threshold/' + filename, cv2.IMREAD_GRAYSCALE)
+        probability_map = probability_map.astype(np.uint8)
+        # print(probability_map.shape)
+        # print(probability_map)
+        # Connected Component Analysis
+        _, labels, stats, _ = cv2.connectedComponentsWithStats(probability_map)
+
+        # Extract regions of interest corresponding to eelgrass
+        eelgrass_regions = []
+        for stat in stats[1:]:  # Skip the background (label 0)
+            eelgrass_regions.append(probability_map[stat[1]:stat[1] + stat[3], stat[0]:stat[0] + stat[2]])
+
+        # Calculate percentage cover
+        total_pixels = probability_map.size
+        eelgrass_pixels = sum([region.size for region in eelgrass_regions])
+        percentage_cover = (eelgrass_pixels / total_pixels) * 100
+
+        # print(f"Percentage Cover of Eelgrass: {percentage_cover:.2f}%")
+        df = pd.concat([df, pd.DataFrame([[filename, percentage_cover]], columns=['Filename', 'Cover'])])
+
+    save_path = config['predicted_covers_dir'] + config['project'] + '_covers/'
+    if not os.path.exists(save_path):
+        os.makedirs(save_path)
+    df.to_csv(save_path + 'Fold' + str(fold) + '.csv', index=False)

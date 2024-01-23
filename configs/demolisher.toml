@@ -1,4 +1,4 @@
-project = "no_patching_no_augmentations"
+project = "canny_no_patching_no_augmentations"
 patching = "False"
 augmentations = "False"
 image_dir = "C:/Users/paras/eelgrass/Reports/13074_csv_image_annotation_report/Data_Images_All/"
@@ -6,6 +6,7 @@ mask_dir = "C:/Users/paras/eelgrass/Reports/13074_csv_image_annotation_report/Da
 test_images_dir = "C:/Users/paras/eelgrass/data_formatted/cover/cropped/"
 test_masks_dir = "C:/Users/paras/eelgrass/data_train_converted/"
 predicted_masks_dir = "C:/Users/paras/eelgrass/Predicted_masks/"
+predicted_covers_dir = "C:/Users/paras/eelgrass/Predicted_covers/"
 save_valid_splits = "/home/parasm/Projects/validation_splits/"
 save_model_weights = "C:/Users/paras/eelgrass/model_weights/"
 model = "Unet"
