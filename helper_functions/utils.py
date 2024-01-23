@@ -79,7 +79,9 @@ def cover_from_mask(fold, config):
     df = pd.DataFrame(columns=['Filename', 'Cover'])
     for filename in os.listdir(config['predicted_masks_dir'] + config['project'] + '_masks/Fold' + str(fold) + '/Without_Threshold/'):
         # Load your probability map as a grayscale image
-        probability_map = cv2.imread(config['predicted_masks_dir'] + config['project'] + '_masks/Fold' + str(fold) + '/Without_Threshold/' + filename, cv2.IMREAD_GRAYSCALE)
+        probability_map = cv2.imread(
+            config['predicted_masks_dir'] + config['project'] + '_masks/Fold' + str(fold) + '/Without_Threshold/' + filename,
+            cv2.IMREAD_GRAYSCALE)
         probability_map = probability_map.astype(np.uint8)
         # print(probability_map.shape)
         # print(probability_map)

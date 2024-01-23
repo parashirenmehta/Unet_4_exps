@@ -46,7 +46,7 @@ class UNet(nn.Module):
         self.conv9 = conv(64 + 128, 64)
         self.up_conv10 = up_conv(64, 32)
         self.conv10 = conv(32 + 64, 32)
-        self.conv11 = nn.Conv2d(32, out_channels, kernel_size=1)
+        self.conv11 = conv(32, out_channels)
 
     def forward(self, x):
         block1 = self.block1(x)
