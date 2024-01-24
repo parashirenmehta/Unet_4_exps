@@ -79,5 +79,5 @@ class UNet(nn.Module):
         x = self.conv10(x)
 
         x = self.conv11(x)
-
+        x = (x > 0.5).float()
         return x
