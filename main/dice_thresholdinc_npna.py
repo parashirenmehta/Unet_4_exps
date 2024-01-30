@@ -3,7 +3,7 @@ import os
 import torch
 import wandb
 from torchvision.transforms import transforms
-from datasets import EELGrass, EELGrass_Patch_Augment
+from datasets import EELGrass, EELGrass_Patch_Augment, EELGrass_New
 from sklearn.model_selection import KFold
 from torch.utils.data import Subset, DataLoader
 from models.unet import UNet
@@ -12,7 +12,6 @@ from trainers.trainer import Trainer
 import numpy as np
 from PIL import Image
 from losses import DiceLoss
-
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'  # Use GPU 0
 os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
@@ -23,7 +22,7 @@ wandb.login(key='434d12235bff28857fbf238c1278bdacead1838d')
 grp_id = wandb.util.generate_id()
 os.environ['WANDB_RUN_GROUP'] = 'experiment-' + grp_id
 
-config = toml.load(open('../configs/no_patching_no_augmentations.toml'))
+config = toml.load(open('../configs/dice_thresholdinc_npna.toml'))
 
 torch.manual_seed(config['seed'])  # PyTorch random seed for CPU
 torch.cuda.manual_seed(config['seed'])  # PyTorch random seed for GPU
@@ -68,12 +67,10 @@ print('Augmentations: ', augmentations)
 
 tensor_to_image = transforms.ToPILImage()
 
-dataset = EELGrass(config['image_dir'],
-                   config['mask_dir'],
-                   transform_image,
-                   transform_mask,
-                   seed=config['seed']
-                   )
+dataset = EELGrass_New(config['image_dir'],
+                       config['mask_dir'],
+                       seed=config['seed']
+                       )
 
 validation_splits = []
 kf = KFold(n_splits=config['num_folds'], shuffle=True, random_state=config['seed'])
@@ -113,13 +110,13 @@ for fold, (train_indices, val_indices) in enumerate(kf.split(dataset)):
     valid_losses = []
 
     # Train model
-    trainer = Trainer(model, optimizer, criterion, train_loader, valid_loader, lr=config['learning_rate'], device=device)
+    trainer = Trainer(model, optimizer, criterion, train_loader, valid_loader, lr=config['learning_rate'],
+                      device=device)
     trainer.train_and_evaluate(fold, config)
 
-validation_path = config['save_valid_splits']+config['model']+'/' + config['project'] + '/'
+validation_path = config['save_valid_splits'] + config['model'] + '/' + config['project'] + '/'
 validation_splits = np.array(validation_splits)
 
 if not os.path.exists(validation_path):
     os.makedirs(validation_path)
-np.save(validation_path+'validation_splits.npy', validation_splits)
-
+np.save(validation_path + 'validation_splits.npy', validation_splits)

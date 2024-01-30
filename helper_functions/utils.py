@@ -68,9 +68,11 @@ def create_masks(fold, config, threshold=-1):
             t = t.reshape((1024, 1024, 1))
             img = tensor_to_image(t)
             if threshold != -1:
-                save_path = config['predicted_masks_dir'] + config['project'] + '_masks/' + 'Fold' + str(fold) + '/Threshold_' + str(threshold) + '/'
+                save_path = config['predicted_masks_dir'] + config['project'] + '_masks/' + 'Fold' + str(
+                    fold) + '/Threshold_' + str(threshold) + '/'
             else:
-                save_path = config['predicted_masks_dir'] + config['project'] + '_masks/' + 'Fold' + str(fold) + '/Without_Threshold/'
+                save_path = config['predicted_masks_dir'] + config['project'] + '_masks/' + 'Fold' + str(
+                    fold) + '/Without_Threshold/'
             if not os.path.exists(save_path):
                 os.makedirs(save_path)
             img.save(save_path + filenames[j])
@@ -78,10 +80,12 @@ def create_masks(fold, config, threshold=-1):
 
 def cover_from_mask(fold, config):
     df = pd.DataFrame(columns=['Filename', 'Cover'])
-    for filename in os.listdir(config['predicted_masks_dir'] + config['project'] + '_masks/Fold' + str(fold) + '/Without_Threshold/'):
+    for filename in os.listdir(
+            config['predicted_masks_dir'] + config['project'] + '_masks/Fold' + str(fold) + '/Without_Threshold/'):
         # Load your probability map as a grayscale image
         probability_map = cv2.imread(
-            config['predicted_masks_dir'] + config['project'] + '_masks/Fold' + str(fold) + '/Without_Threshold/' + filename,
+            config['predicted_masks_dir'] + config['project'] + '_masks/Fold' + str(
+                fold) + '/Without_Threshold/' + filename,
             cv2.IMREAD_GRAYSCALE)
         probability_map = probability_map.astype(np.uint8)
         # print(probability_map.shape)
@@ -136,6 +140,7 @@ def preprocess(mask_values, pil_img, scale, is_mask):
 
         return img
 
+
 def dice_coeff(input: Tensor, target: Tensor, reduce_batch_first: bool = False, epsilon: float = 1e-6):
     # Average of Dice coefficient for all batches, or for a single mask
     assert input.size() == target.size()
@@ -160,3 +165,7 @@ def dice_loss(input: Tensor, target: Tensor, multiclass: bool = False):
     # Dice loss (objective to minimize) between 0 and 1
     fn = multiclass_dice_coeff if multiclass else dice_coeff
     return 1 - fn(input, target, reduce_batch_first=True)
+
+
+def load_image(filename):
+    return Image.open(filename)
