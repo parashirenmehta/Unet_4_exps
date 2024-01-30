@@ -3,6 +3,7 @@ from torchvision.transforms import transforms
 from PIL import Image
 import os
 import torch
+from helper_functions.utils import preprocess
 
 
 class EELGrass(Dataset):
@@ -32,6 +33,68 @@ class EELGrass(Dataset):
 
             mask = Image.open(os.path.join(mask_paths, filename))
             mask = self.mask_initial_transform(mask)
+            self.masks.append(mask)
+
+        if seed is not None:
+            torch.manual_seed(seed)  # PyTorch random seed for CPU
+            torch.cuda.manual_seed(seed)  # PyTorch random seed for GPU
+
+    def __len__(self):
+        return len(self.images)
+
+    def __getitem__(self, index):
+        patch = self.images[index]
+        mask = self.masks[index]
+
+        patch = self.final_transform(patch)
+        mask = self.final_transform(mask)
+
+        return patch, mask
+
+
+class EELGrass_Preprocess(Dataset):
+    def __init__(self,
+                 image_paths,
+                 mask_paths,
+                 image_initial_transform,
+                 mask_initial_transform,
+                 preprocess_bool=True,
+                 seed=None):
+
+        self.preprocess_bool = preprocess_bool
+        self.preprocess = preprocess
+        self.image_paths = image_paths
+        self.mask_paths = mask_paths
+
+        self.image_initial_transform = image_initial_transform
+        self.mask_initial_transform = mask_initial_transform
+
+        self.images = []
+        self.masks = []
+
+        self.final_transform = transforms.ToTensor()
+
+        for filename in os.listdir(image_paths):
+            if preprocess_bool:
+                image = preprocess([0, 1],
+                                   os.path.join(image_paths, filename),
+                                   scale=1.0,
+                                   is_mask=False)
+                mask = preprocess([0, 1],
+                                  os.path.join(mask_paths, filename),
+                                  scale=1.0,
+                                  is_mask=True)
+                image = torch.Tensor(image)
+                mask = torch.Tensor(mask)
+
+            else:
+                image = Image.open(os.path.join(image_paths, filename))
+                image = self.image_initial_transform(image)
+
+                mask = Image.open(os.path.join(mask_paths, filename))
+                mask = self.mask_initial_transform(mask)
+
+            self.images.append(image)
             self.masks.append(mask)
 
         if seed is not None:
@@ -125,6 +188,7 @@ class EELGrass_Patch_Augment(Dataset):
 
             return image_patch, mask_patch
 
+
 class EELGrassEvaluate(Dataset):
     def __init__(self,
                  image_paths,
@@ -157,7 +221,7 @@ class EELGrassEvaluate(Dataset):
 
         if seed is not None:
             torch.manual_seed(seed)  # PyTorch random seed for CPU
-            torch.cuda.manual_seed(seed) # PyTorch random seed for GPU
+            torch.cuda.manual_seed(seed)  # PyTorch random seed for GPU
 
     def __len__(self):
         return len(self.images)
