@@ -6,9 +6,9 @@ from torchvision.transforms import transforms
 from datasets import EELGrass, EELGrass_Patch_Augment, EELGrass_New
 from sklearn.model_selection import KFold
 from torch.utils.data import Subset, DataLoader
-from models.unet import UNet
+from models.unet_model import UNet
 from torch import nn, optim
-from trainers.trainer import Trainer
+from trainers.trainer2 import Trainer
 import numpy as np
 from PIL import Image
 from losses import DiceLoss
@@ -22,7 +22,7 @@ wandb.login(key='434d12235bff28857fbf238c1278bdacead1838d')
 grp_id = wandb.util.generate_id()
 os.environ['WANDB_RUN_GROUP'] = 'experiment-' + grp_id
 
-config = toml.load(open('../configs/dice_thresholdinc_npna.toml'))
+config = toml.load(open('../configs/demolisher.toml'))
 
 torch.manual_seed(config['seed'])  # PyTorch random seed for CPU
 torch.cuda.manual_seed(config['seed'])  # PyTorch random seed for GPU
@@ -89,7 +89,7 @@ for fold, (train_indices, val_indices) in enumerate(kf.split(dataset)):
     valid_loader = DataLoader(valid_dataset, batch_size=config['batch_size'], shuffle=True)
 
     # Create model
-    model = UNet(config['pretrained'], 1).to(device)
+    model = UNet(n_channels=3, n_classes=2).to(device)
 
     num_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
     print(num_params)
